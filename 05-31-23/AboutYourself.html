@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+<script>
+    var me = {
+        FirstName: 'Chinmai',
+        LastName:'Kolisetty',
+        Address: 'Texas',
+        PhoneNumber: '(234) 296-1427',
+        Education: 'Masters in Information Systems and Technology',
+        LuckyNumber: 3,
+        FavouriteColor: 'Blue',
+        FatherName: 'Upendra',
+        MotherName: 'Vijaya',
+        Hobbies: ['Reading','Playing chess','Cooking','Singing','Dancing','Painting','Gardening'],
+
+    };
+</script>
+<style>
+    #b{
+      border-radius:25px;
+      background-color: lightgray;
+      border:10px;
+      padding: auto;
+      height: auto;
+      width: auto;
+    }
+    #c{
+        background-color: black;
+    }
+    .photo{
+            border-radius: 50%;
+    }
+    </style>
+</head>
+<body id="c">
+    <center>
+    <h1 style ="color: goldenrod">About Myself - Assignment 2</h1>
+    <div id="b", style ="color: palevioletred">
+        <img class= "photo" src="file:/Users/chinmaibhavya/Desktop/chinmai_photo.jpg" width="200" height="200">
+    <h2>First Name: <script>document.write(me.FirstName);</script></h2>
+    <h2> Last Name: <script>document.write(me.LastName);</script></h2>
+    <h2> Phone Number: <script>document.write(me.PhoneNumber);</script></h2>
+    <h2> Education: <script>document.write(me.Education);</script></h2>
+    <h2> Hobbie: <script>document.write(me.Hobbies[me.Hobbies.length-1]);</script></h2>
+</div>
+<center>
+</body>
+</html>
