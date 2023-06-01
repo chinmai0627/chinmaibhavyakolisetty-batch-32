@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <head>
+        <script>
+            var car = {
+                model: '2023',
+                brand: 'RR',
+                color: '',
+                engine: [{
+                    type: 'hybrid',
+                    torque: 567,
+                    engineModel: {
+                        type:'v8',
+                    }
+                }]
+            };
+            log(car.engine[0]);
+            log(car.engine[0].engineModel.type);
+        var list = [];
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.push(5);
+
+        log(list)
+        const ind = list.findIndex(v => v == 3);
+        //add(list, 10);
+        log(ind) 
+        
+        function add(array, v) {
+            array.push(v);
+                return array;
+            }
+            function log(v){
+                console.log(v)
+            }
+        </script>
+    </head>
+    <body>
+        <h1>HI welcome to java full stack</h1>
+        <div>
+            <p>
+                We change the world.
+            </p>
+        </div>
+    </body>
+</html>
