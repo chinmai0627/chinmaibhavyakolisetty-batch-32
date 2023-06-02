@@ -1,0 +1,52 @@
+#1
+if (0){
+    log(10); 
+}  
+log(20); #output - F - 20
+#2
+if(1){
+    log(10);
+}
+log(20); #output - T- 10
+#3
+if(''){
+    log(10);
+}else {
+    log(30);
+}
+log(20); #output - T- 10,20
+#4
+if([]){
+    log(10);
+}else {
+    log(30);
+}
+log(20); #output - T- 10,20
+#5
+var x=[];
+if(x){
+    x.forEach(v => log(v));
+    //log(10);
+}else {
+    log(30);
+}
+log(20); #output - 20
+
+#6
+ var x=[];
+if(x){
+    x.forEach(v => log(v.test));
+    //log(10);
+}else {
+    log(30);
+}
+log(20); #output - 20
+#7
+const y=[];
+if(y){
+    y.forEach(v => log(z));
+    //log(10);
+}else {
+    log(30);
+}
+log(20); #output - 20
