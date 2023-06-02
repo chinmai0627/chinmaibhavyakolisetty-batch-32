@@ -1,0 +1,79 @@
+<!-- Assignment 3: Declare a variable name as environment to one value, 
+based on the environment change the sending amount, 
+if it dev environment it should be adding the 10%, 
+test 20%, state 30%, prod 5%. And Display sending amount.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Assignment 3 - June 01 </title>
+    <script>
+        function SendingAmount() {
+            var amount = parseFloat(document.getElementById("amountInput").value);
+            var environment = document.getElementById("environmentSelect").value;
+            var sendingAmount;
+
+            switch (environment) {
+                case "dev":
+                    sendingAmount = amount + (amount * 0.1); 
+                    break;
+                case "test":
+                    sendingAmount = amount + (amount * 0.2); 
+                    break;
+                case "stage":
+                    sendingAmount = amount + (amount * 0.3); 
+                    break;
+                case "prod":
+                    sendingAmount = amount + (amount * 0.05); 
+                    break;
+                default:
+                    sendingAmount = amount; 
+            }
+            log(sendingAmount)
+
+            document.getElementById("result").textContent = "Sending Amount: " + sendingAmount;
+        }
+        
+        function log(v){
+                console.log(v)
+            }
+    </script>
+    <style>
+        #b{
+          border-radius:25px;
+          background-color: lightgray;
+          border:10px;
+        }
+        #c{
+            background-color: rgb(7, 6, 6);
+        }
+        </style>
+</head>
+<body id ="c"><center>
+    <h1 style="color: rgb(9, 145, 147);">Assignment 3 - June 01 </h1>
+    
+    <div id="b", style ="color: rgb(225, 110, 149)">
+        <h2><br><br>Calculating Sending Amount based on the environment<br><br>
+     <label for="amountInput">Amount:</label>
+    <input type="number" id="amountInput" placeholder="Enter amount"  required>
+
+    <br><br>
+
+    <label for="environmentSelect">Environment:</label>
+    <select id="environmentSelect">
+        <option value="dev">Dev</option>
+        <option value="test">Test</option>
+        <option value="stage">Stage</option>
+        <option value="prod">Prod</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="SendingAmount()">Calculate</button>
+    <br><br>
+</h2>
+    <h2 id="result"></h2>
+    </div>
+</center>
+</body>
+</html>
