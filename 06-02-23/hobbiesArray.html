@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<!--Assignment 4: write a function to return all your hobbies in an array
+ to console or on page. And write a function to add a new hobbies 
+ to the existing list of hobbies. And create a function to delete 
+ the specific hobby that I pass from a list.-->
+ <!DOCTYPE html>
 <html>
 <head>
     <title>Hobbies Array Assignment 4 (02 June)</title>
@@ -12,7 +16,7 @@
             for (var i = 0; i < hobbies.length; i++) {
                 var hobbyElement = document.createElement("p");
                 hobbyElement.textContent = hobbies[i];
-                hobbiesList.appendChild(hobbyElement);
+                hobbies.appendChild(hobbyElement);
             }
             console.log("Hobbies: " + hobbies);
         }
