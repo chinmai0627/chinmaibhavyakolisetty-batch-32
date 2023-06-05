@@ -10,22 +10,12 @@
         var hobbies = ["Reading", "Playing Chess", "Painting","Gardening"];
 
         function getAllHobbies() {
-            var hobbiesList = document.getElementById("hobbiesList");
-            hobbiesList.innerHTML = ""; 
-
-            for (var i = 0; i < hobbies.length; i++) {
-                var hobbyElement = document.createElement("p");
-                hobbyElement.textContent = hobbies[i];
-                hobbies.appendChild(hobbyElement);
-            }
             console.log("Hobbies: " + hobbies);
         }
-
         function addHobby(newHobby) {
             hobbies.push(newHobby);
             console.log("New hobby added: " + newHobby);
         }
-
         function deleteHobby(hobbyToDelete) {
             var index = hobbies.indexOf(hobbyToDelete);
             if (index > -1) {
@@ -51,7 +41,6 @@
 <body id ="c"><center>
     <div id="b">
     <h1  style="color: rgb(9, 145, 147);">Hobbies Array Assignment 4 (02 June)</h1> <br><br>
-    <div id="hobbiesList"></div>
     <button onclick="getAllHobbies()">Get All Hobbies</button>
     <br><br>
     <input type="text" id="newHobbyInput" placeholder="Enter New Hobby">
