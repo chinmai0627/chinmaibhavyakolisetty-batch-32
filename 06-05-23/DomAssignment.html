@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Profile Info Assignment 5 - June 05</title>
+    <style>
+        #b{
+          border-radius:25px;
+          background-color: lightgray;
+          border:10px;
+        }
+        #c{
+            background-color: rgb(7, 6, 6);
+            border:10px;
+        }
+        </style>
+</head>
+<body id ="c"><center>
+    <h1 style="color: rgb(9, 145, 147);">Profile Info Assignment 5 - June 05</h1>
+    <div id="b">
+    <script>
+        function displayProfile() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var dob = document.getElementById("dob").value;
+            var email = document.getElementById("email").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            
+            document.getElementById("result").innerHTML =
+                "First Name: " + firstName + "<br>" + "<br>"  +
+                "Last Name: " + lastName + "<br>" + "<br>" +
+                "Date of Birth: " + dob + "<br>" + "<br>" +
+                "Email: " + email + "<br>" + "<br>" +
+                "Phone Number: " + phoneNumber + "<br>" + "<br>" ;
+
+        }
+    </script>
+        <br><br>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" placeholder="Enter your first name"><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" placeholder="Enter your last name"><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email"><br><br>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" placeholder="Enter your phone number"><br><br>
+
+        <button type="button" onclick="displayProfile()">Submit</button><br><br>
+
+    <div id="result"></div>
+</div>
+</center>
+</body>
+</html>

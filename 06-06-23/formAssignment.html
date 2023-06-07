@@ -1,0 +1,85 @@
+<!-- Assignment 6: Create a form with your profile information with 
+    respective text fields Ex: firstname  , lastname , gender, email , 
+    phnno, hobbies(with checkboxes), 
+    dob On submit display all the values below the forms-->
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title> Profile Info Assignment 6 - June 06</title>
+    <style>
+        #b{
+          border-radius:25px;
+          background-color: lightgray;
+          border:10px;
+        }
+        #c{
+            background-color: rgb(7, 6, 6);
+            border:10px;
+        }
+        </style>
+</head>
+<body id ="c"><center>
+    <h1 style="color: rgb(9, 145, 147);">Profile Info Assignment 6 - June 06</h1>
+    <div id="b">
+    <script>
+        function displayProfile() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+            var email = document.getElementById("email").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var hobbies = document.querySelectorAll('input[name="hobbies"]:checked');
+            var hobbiesList = "";
+            for (var i = 0; i < hobbies.length; i++) {
+                hobbiesList += hobbies[i].value + ", ";
+            }
+            var dob = document.getElementById("dob").value;
+
+            var profileInfo = "First Name: " + firstName + "<br><br>" +
+                "Last Name: " + lastName + "<br><br>" +
+                "Gender: " + gender + "<br><br>" +
+                "Email: " + email + "<br><br>" +
+                "Phone Number: " + phoneNumber + "<br><br>" +
+                "Hobbies: " + hobbiesList + "<br><br>" +
+                "Date of Birth: " + dob;
+
+            document.getElementById("profileInfo").innerHTML = profileInfo;
+        }
+    </script>
+    </script>
+        <br><br>  
+        
+        <form onsubmit="event.preventDefault(); displayProfile();">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName"><br><br>
+    
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName"><br><br>
+    
+            <label for="gender">Gender:</label>
+            <input type="radio" id="genderMale" name="gender" value="Male"> Male
+            <input type="radio" id="genderFemale" name="gender" value="Female"> Female<br><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email"><br><br>
+    
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber"><br><br>
+    
+            <label for="hobbies">Hobbies:</label>
+            <input type="checkbox" id="hobby1" name="hobbies" value="Reading"> Reading
+            <input type="checkbox" id="hobby2" name="hobbies" value="PlayingChess"> PlayingChess
+            <input type="checkbox" id="hobby3" name="hobbies" value="Gardening"> Garderning<br><br>
+    
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob"><br><br>
+    
+            <button type="submit">Submit</button><br><br>
+        </form>
+    
+        <div id="profileInfo"></div>
+</div>
+</center>
+</body>
+</html>
