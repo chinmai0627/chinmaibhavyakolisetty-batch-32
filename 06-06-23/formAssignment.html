@@ -23,7 +23,8 @@
     <h1 style="color: rgb(9, 145, 147);">Profile Info Assignment 6 - June 06</h1>
     <div id="b">
     <script>
-        function displayProfile() {
+        function displayProfile(event) {
+            var form = document.getElementById("pinfo");
             var firstName = document.getElementById("firstName").value;
             var lastName = document.getElementById("lastName").value;
             var gender = document.querySelector('input[name="gender"]:checked').value;
@@ -45,12 +46,12 @@
                 "Date of Birth: " + dob;
 
             document.getElementById("profileInfo").innerHTML = profileInfo;
+            form.reset();
         }
-    </script>
     </script>
         <br><br>  
         
-        <form onsubmit="event.preventDefault(); displayProfile();">
+        <form id= "pinfo" onsubmit="event.preventDefault(); displayProfile(event);">
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName"><br><br>
     
