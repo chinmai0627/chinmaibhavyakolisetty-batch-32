@@ -2,7 +2,7 @@
     or on an object to return second smallest value. -->
     <html>
         <head>
-            <title> Protoype Assignment</title>
+            <title> Prototype Assignment</title>
             <script>
                Array.prototype.getSecondSmallest = function() {
             if (this.length < 2) {
@@ -12,12 +12,16 @@
             return sortedArray[1];
         };
 
-        const numbers = [76, 27, 12, 8, 99, 60, -23];
+        const numbers = [76, 27, 82, 80, 99, 60, -23];
         const secondSmallest = numbers.getSecondSmallest();
         console.log("Second Smallest number is:", secondSmallest);
         </script>
         </head>
         <body>
-            <h1>Second smallest value of array using prototype</h1>       
+            <h1>Second smallest value of array using prototype</h1>   
+            <h3 id = "ss"> </h3>   
+            <script>
+                document.getElementById("ss").innerHTML = "The second smallest number in array [" + numbers + "] is " +secondSmallest;
+            </script> 
         </body>
     </html>
