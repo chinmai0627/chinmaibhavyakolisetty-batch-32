@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            var person ={
+                users: []
+            }
+            person._proto_.add = function(user){
+                this.users.push(user)
+            }
+            person.add(1);
+           // array_prototype_customArray = function(params){}    
+           // Object.setPrototypeOf(person, () => {})
+           class Person{
+            users = [];
+           }
+           class Employee extends Person{
+
+           }
+           const r = new Employee().users
+           
+            //function log (v){}
+           // new Promise(, () => {}).then(v => {
+               // log(v)
+           // })
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
